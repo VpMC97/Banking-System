@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence           http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+  <persistence-unit name="com.mycompany_SistemaBancario_jar_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>CONEXION.bd.Cliente</class>
+    <class>CONEXION.bd.Empleado</class>
+    <class>CONEXION.bd.DetalleTransaccion</class>
+    <class>CONEXION.bd.TipoTransaccion</class>
+    <class>CONEXION.bd.Transaccion</class>
+    <class>CONEXION.bd.Cuenta</class>
+    <class>CONEXION.bd.Sucursal</class>
+    <class>CONEXION.bd.TipoCuenta</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://localhost\SQLEXPRESS:1433;databaseName=BancoBD;encrypt=true;trustServerCertificate=true"/>
+      <property name="javax.persistence.jdbc.user" value="admon"/>
+      <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+      <property name="javax.persistence.jdbc.password" value="12345"/>
+      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+    </properties>
+  </persistence-unit>
+</persistence>
